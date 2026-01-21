@@ -269,7 +269,7 @@ void *trader_thread(void *arg)
         pthread_mutex_unlock(&buffer_mutex);
 
         // Kereskedési döntés
-        int decision = rand() % 3; // 0: BUY, 1: SELL, 2: HOLD
+        int decision = rand() % 2; // 0: BUY, 1: SELL
         int quantity = 1 + (rand() % 5);
 
         pthread_mutex_lock(&wallet_mutex);
